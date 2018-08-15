@@ -1,0 +1,28 @@
+<h1>All our Flats</h1>
+    <div>
+      <%= link_to "New flat", new_flat_path %>
+    </div>
+<div class="container" style="position: absolute;">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <% @flats.each do |flat| %>
+      <div class="card" style="
+      height: 175px;
+      background-size: cover !important;
+      background-position: center;
+      position: relative;">
+        <div class="card-description">
+          <h1><%= flat.name %></h1>
+          <p><%= flat.description %></p>
+          <p><i class="fas fa-users"></i> <%= flat.number_of_guests %>   <i class="fas fa-euro-sign"></i> <%= flat.price_per_night %></p>
+          <%= link_to "More Info", flat_path(flat) %>
+          <%= link_to "Edit", edit_flat_path(flat) %>
+          <%= link_to "Remove", flat_path(flat),
+          method: :delete,
+          data: { confirm: "Are you sure?" } %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="container">
+  <h2><%= @flat.name %></h2>
+  <p><%= @flat.description %></p>
+  <p><i class="fas fa-users"></i> <%= @flat.number_of_guests %>   <i class="fas fa-euro-sign"></i> <%= @flat.price_per_night %></p>
+  <br>
+
+  <%= link_to "Back to flats", flats_path %>
+</div>

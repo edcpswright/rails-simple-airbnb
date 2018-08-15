@@ -4,12 +4,32 @@
     <title>RailsSimpleAirbnb</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="navbar">
+
+  <div class="navbar-left hidden-xs hidden-sm">
+    <div>
+    <h2>Simple AirBnb</h2>
+    </div>
+  </div>
+     <div class="navbar-right hidden-xs hidden-sm">
+    <div>
+      <form action="submit" method="get">
+        <div class="form-example">
+          <input type="text" name="Search" id="search" placeholder="Search">
+        </div>
+        <div class="form-example">
+          <input type="submit" value="Search">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
     <%= yield %>
   </body>
 </html>
